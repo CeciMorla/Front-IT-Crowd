@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Card = ({img,price,name,id}) =>{
-    console.log('name', name)
+    
     return(
         <div>
             <Link to={`/${id}`}>

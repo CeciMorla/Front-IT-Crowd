@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {GET_ALL_PRODUCTS, GET_PRODUCT_BY_ID} from '../index.js';
+import {GET_ALL_PRODUCTS, GET_PRODUCT_BY_ID, GET_ALL_BRANDS,ORDER_BY, FILTER_BY_BRAND} from '../index.js';
 
 export const getAllProducts = () => {
     return function(dispatch){
@@ -20,5 +20,32 @@ export const getProductById = (id) => {
                     dispatch({type: GET_PRODUCT_BY_ID, payload: data})
                 })
                 .catch(error => console.log(error))
+    }
+}
+
+export const getAllBrands = () => {
+    return function(dispatch){
+        return  axios.get('http://localhost:3001/brands')
+                .then(response => response.data)
+                .then((data) =>{
+                    dispatch({type: GET_ALL_BRANDS, payload: data})
+                })
+                .catch(error => console.log(error))
+    }
+}
+
+export const orderBy = (payload) =>{
+
+    return{
+        type: ORDER_BY,
+        payload: payload
+    }
+}
+
+export const filterByBrand = (payload) =>{
+    
+    return{
+        type: FILTER_BY_BRAND,
+        payload: payload
     }
 }
