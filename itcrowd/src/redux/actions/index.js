@@ -52,6 +52,19 @@ export const createProduct = (input) =>{
     }
 }
 
+export const deleteProduct = (id) =>{
+    return function(dispatch){
+        return  axios.delete(`http://localhost:3001/products/${id}`)
+                .then(response => response.data)
+    }
+}
+
+export const putProduct = (id,changes) =>{
+    return function(dispatch){
+        return  axios.put(`http://localhost:3001/products/${id}`,{changes})
+                .then(response => response.data)
+    }
+}
 export const orderBy = (payload) =>{
 
     return{
