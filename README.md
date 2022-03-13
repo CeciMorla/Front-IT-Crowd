@@ -21,8 +21,8 @@ The technologies used in front end were:<br>
 # LocalHost
 
 <p>To make it work on localhost, you must clone the repository, inside the itcrowd folder in the console type the command:<br>
-  <bold>npm install</bold><br>
+  `npm install`<br>
   and after:<br>
-  <bold>npm start</bold><br>
+ `npm start`
 </p>
 
