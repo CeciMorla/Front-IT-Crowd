@@ -18,3 +18,11 @@ The technologies used in front end were:<br>
   <a href='https://front-it-crowd.vercel.app/'>https://front-it-crowd.vercel.app/</a>
 </p>
 
+# LocalHost
+
+<p>To make it work on localhost, you must clone the repository, inside the itcrowd folder in the console type the command:<br>
+  <bold>npm install</bold><br>
+  and after:<br>
+  <bold>npm start</bold><br>
+</p>
+
