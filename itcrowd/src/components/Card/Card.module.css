@@ -1,0 +1,51 @@
+
+
+.container{
+    
+    width: 290px;
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.38); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.38);
+    display: inline-block;;
+    align-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin: 20px;
+    
+}
+
+.container:hover  {
+    -webkit-transform:scale(1.05);transform:scale(1.05);
+}
+
+
+
+.link{
+    text-decoration: none;
+}
+
+.name{
+    
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: auto;
+    font-size: 13px;
+    
+}
+
+
+
+
+.price{
+    font-size: 15px;
+    color: #742693;
+}
+
+
+
+.img{
+    width: 65%;
+    height: inherit;
+}

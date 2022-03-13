@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {GET_ALL_PRODUCTS, GET_PRODUCT_BY_ID, GET_ALL_BRANDS,ORDER_BY, FILTER_BY_BRAND,GET_ALL_ADMINS} from '../index.js';
+import {GET_ALL_PRODUCTS, GET_PRODUCT_BY_ID, GET_ALL_BRANDS,ORDER_BY, FILTER_BY_BRAND} from '../index.js';
 
 export const getAllProducts = () => {
     return function(dispatch){
@@ -34,16 +34,6 @@ export const getAllBrands = () => {
     }
 }
 
-export const getAllAdmins = () => {
-    return function(dispatch){
-        return  axios.get('http://localhost:3001/admins')
-                .then(response => response.data)
-                .then((data) =>{
-                    dispatch({type:GET_ALL_ADMINS, payload:data})
-                })
-                .catch(error => console.log(error))
-    }
-}
 
 export const createProduct = (input) =>{
     return function(dispatch){

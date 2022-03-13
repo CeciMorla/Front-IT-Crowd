@@ -4,6 +4,7 @@ import { getProductById,getAllBrands,deleteProduct } from '../../redux/actions/i
 import { useParams, useHistory, Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import swal from "sweetalert";
+import s from './Detail.module.css';
 
 const Detail = () => {
     const dispatch = useDispatch();
@@ -29,21 +30,31 @@ const Detail = () => {
     console.log('filterBrand',filterBrand)
     return(
         <div>
-            <img src={filterBrand?.logo_url} alt='img'/>
-            <h3>{filterBrand?.name}</h3>
-            <img src={product?.image_url} alt='img'/>
-            <h3>{product.name}</h3>
-            <h4>{product.description}</h4>
-            <h5>{product.price}</h5>
+            <Link to='/'>
+            <button className={s.back}>Back</button>
+            </Link>
+            <img src={filterBrand?.logo_url} alt='img' className={s.logo}/>
+            {/*<h3 className={s.brand}>{filterBrand?.name}</h3>*/}
+            <div className={s.divproduct}>
+            <img src={product?.image_url} alt='img'className={s.product}/>
+            </div>
+            <div className={s.info}>
+            <h3 className={s.name}>{product.name}</h3>
+            <div className={s.descriptiondiv}>
+            <h4 className={s.description}>{product.description}</h4>
+            </div>
+            <h5 className={s.price}>{product.price}</h5>
+            
             {
                 isAuthenticated &&
                 <>
                 <Link to={`/put/${id}`}>
-                <button>Edit</button>
+                <button className={s.buttonedit}>Edit</button>
                 </Link>
-                <button onClick={handleDelete}>Delete</button>
+                <button onClick={handleDelete} className={s.buttondelete}>Delete</button>
                 </>
             }
+            </div>
         </div>
     )
 }

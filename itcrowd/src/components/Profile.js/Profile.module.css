@@ -1,0 +1,36 @@
+.image{
+    width: 66px;
+    margin: 7px;
+    margin-left: 450px;
+}
+
+.email{
+    font-weight: bold;
+    margin: -35px;
+    margin-right: -144px;
+    color: white;
+}
+
+.button{
+    border: none;
+    background-color: #F0F0F0;
+    height: 44px;
+    width: 85px;
+    border-radius: 10px;
+    font-size: 19px;
+    font-weight: 500;
+    color:#AE3247;
+    pointer-events: all;
+    margin: -9px;
+    margin-left: 31px;
+}
+
+.button:hover{
+    background-color: #AE3247;
+    -webkit-transform:scale(1.05);transform:scale(1.05);
+    color:white
+}
+
+.container{
+    margin-top: -63px;
+}

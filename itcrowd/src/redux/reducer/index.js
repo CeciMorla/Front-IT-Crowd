@@ -1,11 +1,11 @@
-import { GET_ALL_PRODUCTS, GET_PRODUCT_BY_ID, GET_ALL_BRANDS,ORDER_BY,FILTER_BY_BRAND,GET_ALL_ADMINS } from "../index.js";
+import { GET_ALL_PRODUCTS, GET_PRODUCT_BY_ID, GET_ALL_BRANDS,ORDER_BY,FILTER_BY_BRAND } from "../index.js";
 
 const initialState = {
     allProducts : [],
     products:[],
     product : {},
     brands : [],
-    admins: [],
+    
     
 };
 
@@ -63,11 +63,7 @@ const rootReducer = (state = initialState, action)=>{
                 ...state,
                 products : filterBrand
             };
-            case GET_ALL_ADMINS:
-                return{
-                    ...state,
-                    admins : action.payload
-                }    
+               
         default: 
                 return state;
         

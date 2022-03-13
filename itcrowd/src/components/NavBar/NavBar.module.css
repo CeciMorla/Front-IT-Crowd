@@ -1,0 +1,53 @@
+.container{
+    background-color: #D95263;
+    height: 79px;
+    position: relative;
+    
+}
+
+.containerlogo{
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    width: 80px;
+}
+
+.divSelectors{
+    float: left;
+    margin: 1%;
+    margin-left: 39.5%;
+}
+
+option{
+    
+    font-size: 15px;
+    background-color: white;
+}
+
+select{
+    height: 44px;
+    
+    font-size: 15px;
+    border:white;
+    background: #B0354A;
+    align-items: center;
+    text-align: unset;
+    color: white;
+}
+
+select:hover{
+    background-color: white;
+    color: #B0354A;
+}
+
+.selectOne{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.selectTwo{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

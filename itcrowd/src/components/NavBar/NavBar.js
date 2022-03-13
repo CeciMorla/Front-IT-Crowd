@@ -5,6 +5,8 @@ import Login from "../Login/Login.js";
 import { useAuth0 } from "@auth0/auth0-react";
 import Profile from "../Profile.js/Profile.js";
 import Logout from "../Logout/Logout.js";
+import s from './NavBar.module.css';
+import img from './img/logo.png';
 
 const NavBar = ({handleOrderSort,handleFilterBrands}) => {
     const dispatch = useDispatch();
@@ -18,15 +20,18 @@ const NavBar = ({handleOrderSort,handleFilterBrands}) => {
     
 
     return(
-        <div>
-            <div>
-            <select onChange={(e)=> handleOrderSort(e)}>
+        <div className={s.container}>
+            <div className={s.containerlogo}>
+            <img src={img} alt='logo' className={s.logo}/>
+            </div>
+            <div className={s.divSelectors}>
+            <select onChange={(e)=> handleOrderSort(e)} className={s.selectOne}>
                 <option value='asc'>A-Z</option>
                 <option value='des'>Z-A</option>
             </select>
-            </div>
-            <div>
-            <select onChange={(e)=> handleFilterBrands(e)}>
+            
+            
+            <select onChange={(e)=> handleFilterBrands(e)} className={s.selectTwo}>
                 <option value='allBrands'>All</option>
                 {
                     brands?.map(e=>{

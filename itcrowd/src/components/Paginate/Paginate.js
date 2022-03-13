@@ -1,5 +1,5 @@
 import React from "react";
-//import style from './Paged.module.css';
+import s from './Paginate.module.css';
 
 const Paginate = ({qty,products,paginate})=>{
     const pageNumber = [];
@@ -11,11 +11,11 @@ const Paginate = ({qty,products,paginate})=>{
     
     return(
       
-        <nav >
-            <ul>
+        <nav className={s.container}>
+            <ul className={s.page}>
                 {
                     pageNumber?.map(n =>(
-                        <button onClick={()=>paginate(n)} key={n}>{n}</button>
+                        <button onClick={()=>paginate(n)} key={n} className={s.button}>{n}</button>
                     ))
                 }
             </ul>

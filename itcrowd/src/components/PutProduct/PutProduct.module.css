@@ -1,0 +1,129 @@
+.back{
+    border: none;
+    background-color: #AE3247;
+    height: 44px;
+    width: 171px;
+    border-radius: 10px;
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+    pointer-events: all;
+    margin: 13px;
+    float: left;
+
+}
+
+.back:hover{
+    background-color: white;
+    -webkit-transform:scale(1.05);transform:scale(1.05);
+    color: #AE3247;
+    border: 1px solid #AE3247;
+}
+
+.button{
+    border: none;
+    background-color: #AE3247;
+    height: 44px;
+    width: 171px;
+    border-radius: 10px;
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+    pointer-events: all;
+    margin: 13px;
+    float: left;
+    margin-left: 433px;
+
+}
+
+.button:hover{
+    background-color: white;
+    -webkit-transform:scale(1.05);transform:scale(1.05);
+    color: #AE3247;
+    border: 1px solid #AE3247;
+}
+
+
+
+.name{
+    
+    float:left;
+    margin-left: -267px;
+    margin-top: 93px;
+    color: #AE3247;
+}
+
+
+.inputName{
+    
+    float:left;
+    margin-left: -176px;
+    margin-top: 93px;
+}
+
+.description{
+    
+    float:left;
+    margin-left: 547px; 
+    margin-top: 27px;
+    color: #AE3247;
+}
+
+.inputDescription{
+    
+    float:left;
+    margin-left: 11px;
+    margin-top: 24px;
+}
+
+.image{
+    
+    float:left;
+    margin-left: -263px;
+    margin-top: 72px;
+    color: #AE3247;
+}
+
+.inputImage{
+    
+    float:left;
+    margin-left: -178px;
+    margin-top: 72px;
+}
+
+.price{
+    
+    float:left;
+    margin-left: -264px;
+    margin-top: 119px;
+    color:#AE3247
+}
+
+.inputPrice{
+    
+    float:left;
+    margin-left: -178px;
+    margin-top: 119px;
+}
+
+.confirm{
+    border: none;
+    background-color: #AE3247;
+    height: 44px;
+    width: 171px;
+    border-radius: 10px;
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+    pointer-events: all;
+    margin: 96px;
+    float: left;
+
+}
+
+.confirm:hover{
+    background-color: white;
+    -webkit-transform:scale(1.05);transform:scale(1.05);
+    color: #AE3247;
+    border: 1px solid #AE3247;
+}

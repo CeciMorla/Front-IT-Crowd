@@ -1,0 +1,22 @@
+.container{
+    position: relative;
+}
+
+.page{
+    list-style: none;
+    display: inline-table;
+    
+}
+
+.button{
+    color: white;
+    padding: 10px;
+    background-color: #D95263;
+    border: none;
+    
+}
+
+.button:hover{
+    background-color: white;
+    color: #D95263;
+}
