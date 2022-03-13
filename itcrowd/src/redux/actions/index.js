@@ -3,7 +3,7 @@ import {GET_ALL_PRODUCTS, GET_PRODUCT_BY_ID, GET_ALL_BRANDS,ORDER_BY, FILTER_BY_
 
 export const getAllProducts = () => {
     return function(dispatch){
-        return  axios.get('http://localhost:3001/products')
+        return  axios.get('https://back-it-crowd.herokuapp.com/products')
                 .then(response => response.data)
                 .then((data) =>{
                     dispatch({type: GET_ALL_PRODUCTS, payload: data})
@@ -14,7 +14,7 @@ export const getAllProducts = () => {
 
 export const getProductById = (id) => {
     return function(dispatch){
-        return  axios.get(`http://localhost:3001/products/${id}`)
+        return  axios.get(`https://back-it-crowd.herokuapp.com/products/${id}`)
                 .then(response => response.data)
                 .then((data) => {
                     dispatch({type: GET_PRODUCT_BY_ID, payload: data})
@@ -25,7 +25,7 @@ export const getProductById = (id) => {
 
 export const getAllBrands = () => {
     return function(dispatch){
-        return  axios.get('http://localhost:3001/brands')
+        return  axios.get('https://back-it-crowd.herokuapp.com/brands')
                 .then(response => response.data)
                 .then((data) =>{
                     dispatch({type: GET_ALL_BRANDS, payload: data})
@@ -37,21 +37,21 @@ export const getAllBrands = () => {
 
 export const createProduct = (input) =>{
     return function(dispatch){
-        return  axios.post('http://localhost:3001/products',input)
+        return  axios.post('https://back-it-crowd.herokuapp.com/products',input)
                 .then(response => response.data)
     }
 }
 
 export const deleteProduct = (id) =>{
     return function(dispatch){
-        return  axios.delete(`http://localhost:3001/products/${id}`)
+        return  axios.delete(`https://back-it-crowd.herokuapp.com/products/${id}`)
                 .then(response => response.data)
     }
 }
 
 export const putProduct = (id,changes) =>{
     return function(dispatch){
-        return  axios.put(`http://localhost:3001/products/${id}`,{changes})
+        return  axios.put(`https://back-it-crowd.herokuapp.com/products/${id}`,{changes})
                 .then(response => response.data)
     }
 }
