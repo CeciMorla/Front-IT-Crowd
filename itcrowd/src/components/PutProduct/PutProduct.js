@@ -52,7 +52,7 @@ const PutProduct = () => {
                         readOnly='readOnly'
                         type='text'
                         name='name'
-                        value={product.name}
+                        value={product?.name}
                         className={s.inputName}
                     /> 
                 <label className={s.description}>Description</label>
@@ -60,7 +60,7 @@ const PutProduct = () => {
                         readOnly='readOnly'
                         type='text'
                         name='description'
-                        value={product.description}
+                        value={product?.description}
                         className={s.inputDescription}
                     /> 
                 <label className={s.image}>Image</label>
@@ -68,7 +68,7 @@ const PutProduct = () => {
                         readOnly='readOnly'
                         type='text'
                         name='description'
-                        value={product.image_url}
+                        value={product?.image_url}
                         className={s.inputImage}
                     /> 
                 <label className={s.price}>Price</label>
@@ -78,7 +78,7 @@ const PutProduct = () => {
                         readOnly='readOnly'
                         type='text'
                         name='price'
-                        value={product.price}
+                        value={product?.price}
                         className={s.inputPrice}
                     /> :
                     <input

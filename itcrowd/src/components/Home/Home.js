@@ -14,7 +14,7 @@ const Home = () => {
     const qty = 8;
     const lastProduct = currentPage * qty; // 1 * 12 = 12
     const firstProduct = lastProduct - qty; // 12 - 12 = 0
-    const currentProduct = products.slice(firstProduct,lastProduct);
+    const currentProduct = products?.slice(firstProduct,lastProduct);
     
 
     const paginate = (page)=>{
@@ -55,7 +55,7 @@ const Home = () => {
                     <p></p>
                 )
             }
-            <Paginate qty={qty} products={products.length} paginate={paginate}/>
+            <Paginate qty={qty} products={products?.length} paginate={paginate}/>
         </div>
     )
 }

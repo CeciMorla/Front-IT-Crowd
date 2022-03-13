@@ -5,7 +5,7 @@ import s from './Profile.module.css';
 
 const Profile = () => {
     const {user, isAuthenticated, isLoading} = useAuth0();
-    console.log('user',user)
+    
     if(isLoading){
         return <div>Loading...</div>
     }
@@ -13,8 +13,8 @@ const Profile = () => {
     return(
         isAuthenticated &&
         <div>
-            <img src={user.picture} alt={user.name} className={s.image}/>
-            <p className={s.email}>{user.email}</p>
+            <img src={user?.picture} alt={user?.name} className={s.image}/>
+            <p className={s.email}>{user?.email}</p>
             <div className={s.container}>
             <Link to='/create'>
                 <button className={s.button}>New Product</button>

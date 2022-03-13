@@ -39,11 +39,11 @@ const Detail = () => {
             <img src={product?.image_url} alt='img'className={s.product}/>
             </div>
             <div className={s.info}>
-            <h3 className={s.name}>{product.name}</h3>
+            <h3 className={s.name}>{product?.name}</h3>
             <div className={s.descriptiondiv}>
-            <h4 className={s.description}>{product.description}</h4>
+            <h4 className={s.description}>{product?.description}</h4>
             </div>
-            <h5 className={s.price}>{product.price}</h5>
+            <h5 className={s.price}>{product?.price}</h5>
             
             {
                 isAuthenticated &&

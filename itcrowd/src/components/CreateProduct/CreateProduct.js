@@ -11,7 +11,7 @@ const CreateProduct = () => {
     const history = useHistory();
     const products = useSelector(state => state.allProducts)
     const [input,setInput] = useState({name:"",description:"",image_url:"",price:""});
-    console.log(input.price)
+    
 
     useEffect(()=>{
         dispatch(getAllProducts())
@@ -28,7 +28,7 @@ const CreateProduct = () => {
     }
 
     function onSubmit(e){
-        const findProduct = products.find(e => e.name === input.name)
+        const findProduct = products?.find(e => e.name === input.name)
         if(findProduct){
             swal("Existing Product");
             history.push('/')
