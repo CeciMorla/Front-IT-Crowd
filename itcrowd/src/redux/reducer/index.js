@@ -1,10 +1,11 @@
-import { GET_ALL_PRODUCTS, GET_PRODUCT_BY_ID, GET_ALL_BRANDS,ORDER_BY,FILTER_BY_BRAND } from "../index.js";
+import { GET_ALL_PRODUCTS, GET_PRODUCT_BY_ID, GET_ALL_BRANDS,ORDER_BY,FILTER_BY_BRAND,GET_ALL_ADMINS } from "../index.js";
 
 const initialState = {
     allProducts : [],
     products:[],
     product : {},
     brands : [],
+    admins: [],
     
 };
 
@@ -56,11 +57,17 @@ const rootReducer = (state = initialState, action)=>{
             case FILTER_BY_BRAND:
             let products = state.allProducts;
             let filterBrand = action.payload === 'allBrands' ? 
-            products : products.filter((e)=> e.brandId ===(action.payload));
+            products : products.filter((e)=> e.brandId == (action.payload));
+            
             return{
                 ...state,
                 products : filterBrand
-            };    
+            };
+            case GET_ALL_ADMINS:
+                return{
+                    ...state,
+                    admins : action.payload
+                }    
         default: 
                 return state;
         

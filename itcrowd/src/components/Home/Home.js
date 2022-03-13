@@ -1,9 +1,10 @@
 import React, {useEffect,useState} from 'react';
 import Cards from '../Cards/Cards';
 import NavBar from '../NavBar/NavBar';
-import {getAllProducts,orderBy} from '../../redux/actions/index.js';
+import {getAllProducts,orderBy,filterByBrand} from '../../redux/actions/index.js';
 import { useDispatch, useSelector } from 'react-redux';
 import Paginate from '../Paginate/Paginate.js';
+
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -14,6 +15,7 @@ const Home = () => {
     const lastProduct = currentPage * qty; // 1 * 12 = 12
     const firstProduct = lastProduct - qty; // 12 - 12 = 0
     const currentProduct = products.slice(firstProduct,lastProduct);
+    
 
     const paginate = (page)=>{
         setCurrentPage(page)
@@ -30,10 +32,22 @@ const Home = () => {
         setCurrentPage(1);
         setOrder(e.target.value);
     }
+
+    function handleFilterBrands(e){
+        e.preventDefault();
+        dispatch(filterByBrand(e.target.value));
+        setCurrentPage(1);
+        
+    }
   
     return(
         <div>
-            <NavBar handleOrderSort={handleOrderSort} />
+            <NavBar 
+                handleOrderSort={handleOrderSort}
+                handleFilterBrands={handleFilterBrands} 
+            />
+            
+
             {
                 currentProduct.length? (
                     <Cards currentProduct={currentProduct} />

@@ -5,7 +5,7 @@ const Card = ({img,price,name,id}) =>{
     
     return(
         <div>
-            <Link to={`/${id}`}>
+            <Link to={`detail/${id}`}>
             <div>
                 <img src={img} alt='img'/>
                 <h5>{name}</h5>
